@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado do Jogo</title>
+</head>
+<body>
+<header style="display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background-color: #fff; border-bottom: 1px solid #e0e0e0;">
+    <div style="display: flex; align-items: center; height: 42px;">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.f-T1CPg2kw4pc_cj268OvwHaEK&pid=Api&P=0&h=180" alt="Logo accenture" style="height: 40px;margin-left: 300px;">
+        </div>
+    <style>
+
+    body {
+        font-family: 'Roboto Condensed', Arial, sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    .about-topics-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        margin: 0 auto;
+        text-align: center;
+        flex-direction: column;
+        transform: translateY(-20px);
+    }
+</style>
+
+</header>
+<div style="height: 400px; background-image: url('https://wallpapers.com/images/high/paper-plane-minimalist-aesthetic-laptop-n29mqbx5er4gigwv.webp'); background-size: cover; background-position: center;">
+    <div style="color: black; position: relative; text-align: center; padding-top: 100px;">
+        <h1 style="color:black;font-size: 48px;"><strong>Hello World! Estamos na página de resultado!</strong></h1>
+    </div>
+</div>
+<div class="about-topics-container">
+        <div class="about-container">
+            <h2 style="font-size: 32px;"><strong>Resultado do Jogo</strong></h2>
+            <p>Você escolheu: <span th:text="${escolha}"></span></p>
+            <p>O computador escolheu: <span th:text="${computadorEscolha}"></span></p>
+            <p>Resultado: <span th:text="${saida}"></span></p>
+        </div>
+    <div class="about-container">
+        <h2 style="font-size: 32px;"><strong>Placar Atual</strong></h2>
+        <p>Vitórias: <span th:text="${score.vitorias}"></span></p>
+        <p>Derrotas: <span th:text="${score.derrotas}"></span></p>
+        <p>Empates: <span th:text="${score.empates}"></span></p>
+    </div>
+    <div class="about-container">
+    <a href="/scoreReset">Zerar Score</a>
+    </div>
+</div>
+</body>
+</html>
